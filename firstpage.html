@@ -1,0 +1,63 @@
+<html>
+    <head><title>Fruit Shop Details</title>
+        <div style="background-color:limegreen;">
+    <b><h1><p style="font-size:150%;font-family:Algerian;" align="center"><span style="color: red">ORGANIC MAGIC</span></p></h1></b>
+    <marquee><b>Welcome to Our<span style="color:darkmagenta"> Organic Magic Fruit Shop </span>We have Only Natural Fruits.(Address:T-Nagar,Chennai,600035)</b> </marquee>
+    </head>
+    <script>
+        function f1()
+        {
+        var username=document.form1.hike.value;
+        var phonenumber=document.form1.number.value;
+        var emailaddress=document.form1.mailid.value;
+        var password=document.form1.password.value; 
+        if(username==null||username=="")
+        {
+            alert("Please Enter UserName");
+            return false;
+        }else if 
+           (phonenumber==null||phonenumber==""){
+            alert("Please Enter Phonenumber");
+            return false;
+        }else if (emailaddress==null||emailaddress==""){
+            alert("Please Enter Emailid");
+            return false;  
+        }else if (password.length<8){                                  
+            alert("Password must be at least 8character long");
+            return false;
+        }
+    }
+    </script>
+    <body>
+        <b><h3><p <p style="font-family:Engravers MT;"align="center"><span style="color:blue">Welcome to Online Shopping</span></p></h3></b>
+        <h3><p align="center"style="font-family:Comic Sans MS">Register Your Details and Login Page</p></h3>
+    <form name="form1" method="post" onsubmit="return f1()" action="second.html">
+<p align="center"><b><span style="color:whitesmoke">UserName :</span></b>
+    <input type="text" name="hike"><br><br>
+    <b><span style="color:whitesmoke">Phone No :</span></b>
+    <input type="text" name="number" pattern="[1-9]{1}[0-9]{9}"><br/><br/>
+    <b><span style="color:whitesmoke">E-mail Id :</span></b>
+    <input type="email" name="mailid"><br/><br/>
+    <b><span style="color:whitesmoke">PassWord :</span></b>
+    <input type="password" name="password"><br/><br/>
+    <input type="submit" value="Login">
+    <input type="reset" value="Reset"/></p><br>
+</div>
+    <img src="shop1.jpg" align="left">
+    <img src="shop2.jpg" align="topright" height="520" width="720"><br/><br/>
+    <img src="shop3.jpg" align="left" height="520" width="780">
+    <img src="shop4.jpg" align="topright" height="520" width="720"><br/><br/>
+    <img src="shop5.jpg" align="left" height="520" width="780">
+    <img src="shop6.jpg" align="topright" height="520" width="720"><br/><br/>
+
+    <img src="xyz"alt="Thank You to Visit Our Page">
+
+
+    </form>
+    </body>
+</html>
+
+
+
+
+

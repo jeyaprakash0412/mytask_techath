@@ -1,0 +1,198 @@
+<html>
+    <head>
+        <title>Online Shopping </title>
+    </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        *{
+            box-sizing:border-box;
+        }
+        
+        .column {
+      float: left;
+      width: 25%;
+      padding:20px;
+      
+    }
+    .row:after {
+      content: "";
+      display:table;
+      clear:both;
+    }
+    
+    .btn {
+      border:crimson;
+      outline:indigo;
+      padding: 12px 16px;
+      background-color: #f1f1f1;
+      cursor: pointer;
+    }
+    
+    .btn:hover {
+      background-color: #ddd;
+    }
+    
+    .btn.active {
+      background-color: #666;
+      color: white;
+    }
+    </style>
+
+<script>
+  var uploader=document.getElementById("uploader");
+  var fileButton=document.getElementById("fileButton");
+
+    var products=[{
+      id :1,
+      Name="Apple",
+      Price="150/kg",
+      Image="apple.jpg",
+    },
+    {
+      id :2,
+      Name="Orange",
+      Price="120/kg",
+      Image="orange.jpg",
+    },
+    {
+      id :3,
+      Name="Grapes",
+      Price="110/kg",
+      Image="grapes.jpg",
+    },
+    {
+      id :4,
+      Name="Pomegranate",
+      Price="180/kg",
+      Image="pomegranate.jpg",
+    },
+    {
+      id :5,
+      Name="Watermelon",
+      Price="150/kg",
+      Image="watermelon.jpg",
+    },
+    {
+      id :6,
+      Name="Strawberry",
+      Price="120/kg",
+      Image="strawberry.jpg",
+    },
+    {
+      id :7,
+      Name="Guava",
+      Price="110/kg",
+     Image="guava.jpg",
+    },
+    {
+      id :8,
+      Name="Papaya",
+      Price="180/kg",
+      Image="papaya.jpg"
+
+    }]
+</script>
+
+     <body>
+        <b><h1><p style="font-size:150%;font-family:Algerian;" align="center"><span style="color: red">ORGANIC MAGIC</span></p></h1></b>
+        <button style="font-size:24px">Cart<i class="fa fa-shopping-cart"></i></button>
+        <marquee><b>Welcome to Our<span style="color:darkmagenta"> Organic Magic Fruit Shop </span>We have Only Natural Fruits.(Address:T-Nagar,Chennai,600035)</b> </marquee>
+        <h2>You Can Select your Orders Go to Place on Your Cart List</h2>
+        <form action="thirdpage.html" method="post">
+          <b><h1><p style="font-size:120%;" align="left"><span style="color:black"></span>Select your to Order Cart</span></p></h1></b>
+          <input type="submit" value="Your Cart "/><br><br>
+          </form>
+        
+        
+
+        <div id="buttonContainer">
+            <button class="button" onclick="listView()"><i class="fa fa-bars"></i> List</button> 
+            <button class="button active" onclick="gridView()"><i class="fa fa-th-large"></i> Grid</button>
+            <h4>Click on a button grid or list view </h4>
+                
+          </div>
+          <br>
+          <div class="row">
+            <div class="column" style="background-color:chartreuse;">
+            <img src="apple.jpg" height="250" width="250"><br/><br/>
+              <h1>Apple</h1>
+              <h4>Rs.150/kg</h4>
+              <button class="button"font-size="80px">Add to Cart</button>
+              
+            </div>
+            <div class="column" style="background-color:chartreuse;">
+            <img src="orange.jpg"  height="250" width="250"><br/><br/>
+                <h1>Orange</h1>
+                <h4>Rs.120/kg</h4>
+                <button class="button"font-size="80px">Add to Cart</button>
+              </div>
+              <div class="row">
+                <div class="column" style="background-color:chartreuse;">
+                <img src="grapes.jpg"  height="250" width="250"><br/><br/>
+                  <h1>Grapes</h1>
+                  <h4>Rs.110/kg</h4>
+                  <button class="button"font-size="80px">Add to Cart</button>
+                </div>
+                <div class="column" style="background-color:chartreuse;">
+                <img src="pomegranate.jpg" height="250" width="250"><br/><br/>
+                    <h1>Pomegranate</h1>
+                    <h4>Rs.180/kg</h4>
+                    <button class="button"font-size="80px">Add to Cart</button>
+                  </div>
+          </div>
+          <div class="row">
+            <div class="column" style="background-color:chartreuse;">
+            <img src="watermelon.jpg" height="250" width="250"><br/><br/>
+              <h1>Watermelon</h1>
+              <h4>Rs.50/kg</h4>
+              <button class="button"font-size="80px">Add to Cart</button>
+            </div>
+            <div class="column" style="background-color:chartreuse;">
+            <img src="strawberry.jpg" height="250" width="250"><br/><br/>
+                <h1>Strawberry</h1>
+                <h4>Rs.160/kg</h4>
+                <button class="button"font-size="80px">Add to Cart</button>
+              </div>
+              <div class="row">
+                <div class="column" style="background-color:chartreuse;">
+                <img src="guava.jpg" height="250" width="250"><br/><br/>
+                  <h1>Guava</h1>
+                  <h4>Rs.70/kg</h4>
+                  <button class="button"font-size="80px">Add to Cart</button>
+                </div>
+                <div class="column" style="background-color:chartreuse;">
+                <img src="papaya.jpg"height="250" width="250"><br/><br/>
+                    <h1>Papaya</h1>
+                    <h4>Rs.85/kg</h4>
+                    <button class="button"font-size="80px">Add to Cart</button>
+                  </div>
+          </div>
+          <script>
+            var elements = document.getElementsByClassName("column");
+            var i;
+            function listView() {
+          for (i = 0; i < elements.length; i++) {
+          elements[i].style.width = "100%";
+        }
+       }
+       function gridView() {
+      for (i = 0; i < elements.length; i++) {
+        elements[i].style.width = "25%";
+      }
+    }
+    var container = document.getElementById("buttonContainer");
+    var buttons = container.getElementsByClassName("button");
+    for (var i = 0; i < buttons.length; i++) {
+      buttons[i].addEventListener("click", function() {
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+      });
+    }
+    
+
+</script>   
+
+</body>
+
+</html>
